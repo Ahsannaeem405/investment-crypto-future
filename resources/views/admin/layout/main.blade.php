@@ -64,13 +64,13 @@
                 <a class="navbar-brand" href="index.html">
                     <div class="brand-text brand-big visible text-uppercase">
                         <strong class="text-primary" style="color: white!important;">
-                             Imperial Mining
+                             Future Investment
                         </strong>
                         
                     </div>
                     <div class="brand-text brand-sm">
                         <strong class="text-primary" style="color: white!important;">
-                            I
+                            F
                         </strong>
                         
                     </div>
