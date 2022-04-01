@@ -2102,7 +2102,7 @@ STYLE SWITCHER FOR DEMO
   padding-top: 0.3125rem;
   padding-bottom: 0.3125rem;
   margin-right: 1rem;
-  font-size: 1.1rem;
+  font-size: 1.1rem!important;
 }
 
 .navbar-toggler {
