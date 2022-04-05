@@ -107,9 +107,9 @@
                                     </div>
                                 </div>
                                  <div class="form-group row">
-                                    <label class="col-sm-3 form-control-label">ADA</label>
+                                    <label class="col-sm-3 form-control-label">WBTC</label>
                                     <div class="col-sm-9">
-                                        <input id="inputHorizontalSuccess" type="text" value="{{Auth()->user()->ada}}"  placeholder="ADA Address" class="form-control form-control-success" name="ada">
+                                        <input id="inputHorizontalSuccess" type="text" value="{{Auth()->user()->ada}}"  placeholder="WBTC Address" class="form-control form-control-success" name="ada">
                                     </div>
                                 </div>
                                 <div class="form-group row">
@@ -144,9 +144,9 @@
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label class="col-sm-3 form-control-label">ADA QR</label>
+                                    <label class="col-sm-3 form-control-label">WBTC QR</label>
                                     <div class="col-sm-9">
-                                        <input id="inputHorizontalSuccess" type="file"   placeholder="Shiba Inu Address" class="form-control form-control-success" name="ada_file">
+                                        <input id="inputHorizontalSuccess" type="file"   placeholder="WBTC Address" class="form-control form-control-success" name="ada_file">
                                     </div>
                                 </div>
 

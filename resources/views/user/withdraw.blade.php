@@ -55,7 +55,7 @@
                                                     <option value="{{Auth()->user()->usdt}},{{Auth()->user()->usdt_file}},3">USDT</option>
                                                     <option value="{{Auth()->user()->bnb}},{{Auth()->user()->bnb_file}},4">BNB</option>
                                                     <option value="{{Auth()->user()->shi}},{{Auth()->user()->shi_file}},5">Shiba Inu</option>
-                                                    <option value="{{Auth()->user()->ada}},{{Auth()->user()->ada_file}},6">Ada</option>
+                                                    <option value="{{Auth()->user()->ada}},{{Auth()->user()->ada_file}},6">WBTC</option>
 
                                                   
                                                 </select>
@@ -138,7 +138,7 @@
             var data = $(".address").val();
             var amount = $(".amount").val();
             
-            var user_amount = {{Auth()->user()->bitcoin_coin}};
+            var user_amount = {{$all}};
             
             const new_data = data.split(",");
 

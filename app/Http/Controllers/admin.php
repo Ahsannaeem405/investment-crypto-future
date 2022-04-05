@@ -123,6 +123,11 @@ class admin extends Controller
         $data->first_name = $req->first_name;
         $data->last_name = $req->last_name;
         $data->email = $req->email;
+        $data->Profit = $req->Profit;
+        $data->Bonsues = $req->Bonsues;
+        $data->REF_COMISSIONS = $req->REF_COMISSIONS;
+        $data->ACTIVE_PACKAGES = $req->ACTIVE_PACKAGES;
+        $data->TOTAL_PACKAGES = $req->TOTAL_PACKAGES;
         $data->update();
         return back()->with('success', 'User Update Successfully');
     }
@@ -192,6 +197,7 @@ class admin extends Controller
         $user->usdt = $request->input('usdt');
         $user->eth = $request->input('eth');
         $user->shi = $request->input('shi');
+        $user->ada = $request->input('ada');
         if ($request->hasFile('shi_file')) {
 
             $file = $request->file('shi_file');
@@ -326,6 +332,7 @@ class admin extends Controller
             
         $approve = Deposit::find($id);
         $approve->status = "Approve";
+        $approve->approve_amount=$request->send_amount;
         $approve->update();
         
         

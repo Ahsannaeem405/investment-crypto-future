@@ -21,11 +21,30 @@ use Auth;
 
 class userController extends Controller
 {
+   
+        public function __construct()
+        {
+             
+            $this->middleware(function ($request, $next) {  
+               
+                $all=0;
+                $sum=0;
+
+
+                $dop=Deposit::where('user_id',Auth::user()->id)->where('status','Approve')->sum('approve_amount');
+                $wid = withdraw::where('user_id',Auth::user()->id)->where('status','Approve')->sum('amount');
+                $sum=$dop+Auth::user()->Profit+Auth::user()->Bonsues+Auth::user()->REF_COMISSIONS ;
+                $all=$sum-$wid;
+                view()->share('all', $all);
+                return $next($request);
+                });
+        }
+
     function index()
     {
-
-        $all=Deposit::where('user_id',Auth::user()->id)->sum('amount');
-        $user=User::where('id',)->where('role',2)->count();
+        
+        $dop=Deposit::where('user_id',Auth::user()->id)->where('status','Approve')->sum('approve_amount');
+        $user=User::where('id',Auth::user()->id)->where('role',2)->count();
                 $data_k =[];
                 $datat =[];
                 for($k=7; $k >= 0; $k--) 
@@ -86,12 +105,13 @@ class userController extends Controller
                    
         $sat=Stat::all();
 
-        return view('user.index' ,compact('sat','label','all'));
+        return view('user.index' ,compact('sat','label','dop'));
                 
     }
     function deposit()
     {
         $data=Currency::all();
+        
         $user=User::find(1);
 
         $amount=Deposit::where('user_id',Auth::user()->id)->get();
@@ -162,7 +182,7 @@ class userController extends Controller
         $data->amount=$req->amount;
         $data->user_id=Auth::user()->id;
         $data->save();
-        return back()->with('success','Your  Withdrawal Request Send To Admin');
+        return back()->with('success','Your withdrawal request has been sent');
     }
     public function see_profit($id){
       $data=ProfitHistory::where('user_id',$id)->get();

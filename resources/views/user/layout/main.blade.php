@@ -65,13 +65,13 @@
                 <a class="navbar-brand" href="index.html">
                     <div class="brand-text brand-big visible text-uppercase">
                         <strong class="text-primary" style="color: white!important;">
-                            Future Investment
+                             Imperial Mining
                         </strong>
                         
                     </div>
                     <div class="brand-text brand-sm">
                         <strong class="text-primary" style="color: white!important;">
-                            F
+                            I
                         </strong>
                         
                     </div>
@@ -93,7 +93,7 @@
 
                                           
                         
-                            <span class="d-none d-sm-inline-block">$ {{Auth()->user()->bitcoin_coin}}</span>
+                            <span class="d-none d-sm-inline-block">$ {{$all}}</span>
                         
                         
                    </div>    
@@ -128,7 +128,7 @@
           
         <div class="avatar"><img src="{{asset('upload/images/'.Auth()->user()->profile)}}" alt="..." class="img-fluid rounded-circle"></div>
         @else
-        <div class="avatar"><img src="{{asset('img_264570-1.webp')}}" alt="..." class="img-fluid rounded-circle"></div>
+        <div class="avatar"><img src="{{asset('img_264570.png')}}" alt="..." class="img-fluid rounded-circle"></div>
         
         @endif
         <div class="title">

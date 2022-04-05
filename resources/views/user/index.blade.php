@@ -31,7 +31,7 @@
                 <div class="title">
                   <div class="icon"><i style="color:#eb930f" class="fa fa-download" aria-hidden="true"></i></div><strong>Deposited </strong>
                 </div>
-                <div class="number dashtext-1" style="color:white !important">${{$all}}</div>
+                <div class="number dashtext-1" style="color:white !important">${{$dop}}</div>
               </div>
               <div class="progress progress-template">
                 <div role="progressbar" style="width: 100%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" class="progress-bar progress-bar-template dashbg-1"></div>
@@ -44,7 +44,7 @@
                 <div class="title">
                   <div class="icon"><i style="color:green" class="fa fa-database"></i></div><strong>Profit</strong>
                 </div>
-                <div style="color:white !important  " class="number dashtext-2">$375</div>
+                <div style="color:white !important  " class="number dashtext-2">${{Auth()->user()->Profit}}</div>
               </div>
               <div class="progress progress-template">
                 <div role="progressbar" style="width: 100%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" class="progress-bar progress-bar-template dashbg-2"></div>
@@ -57,7 +57,7 @@
                 <div class="title">
                   <div class="icon"><i style="color:#ef4e65" class="fa fa-gift"></i></div><strong>Bonsues</strong>
                 </div>
-                <div class="number dashtext-3" style="color:white !important">${{$all}}</div>
+                <div class="number dashtext-3" style="color:white !important">${{Auth()->user()->Bonsues}}</div>
               </div>
               <div class="progress progress-template">
                 <div role="progressbar" style="width: 100%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100" class="progress-bar progress-bar-template dashbg-3"></div>
@@ -70,7 +70,7 @@
                 <div class="title">
                   <div class="icon"><i style="color:blue" class="fa fa-users"></i></div><strong>ref. Comissions</strong>
                 </div>
-                <div class="number dashtext-4" style="color: white !important;">$41</div>
+                <div class="number dashtext-4" style="color: white !important;">${{Auth()->user()->REF_COMISSIONS}}</div>
               </div>
               <div class="progress progress-template">
                 <div role="progressbar" style="width: 100%" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100" class="progress-bar progress-bar-template dashbg-4"></div>
@@ -102,7 +102,7 @@
                 <div class="title">
                   <div class="icon"><i class="fa fa-envelope" style="color: #e95f71;"></i></div><strong style="font-size: 13px;">Total Packages</strong>
                 </div>
-                <div class="number dashtext-2" style="color:white !important">375</div>
+                <div class="number dashtext-2" style="color:white !important">{{Auth()->user()->TOTAL_PACKAGES}}</div>
               </div>
               <div class="progress progress-template">
                 <div role="progressbar" style="width: 100%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" class="progress-bar progress-bar-template dashbg-2"></div>
@@ -115,11 +115,66 @@
                 <div class="title">
                   <div class="icon"><i class="fa fa-envelope-open" style="color:blue"></i></div><strong style="font-size: 13px;">Active Packages </strong>
                 </div>
-                <div class="number dashtext-3" style="color:white !important">140</div>
+                <div class="number dashtext-3" style="color:white !important">{{Auth()->user()->ACTIVE_PACKAGES}}</div>
               </div>
               <div class="progress progress-template">
                 <div role="progressbar" style="width: 100%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100" class="progress-bar progress-bar-template dashbg-3"></div>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="no-padding-top no-padding-bottom">
+      <style type="text/css">
+        .tradingview-widget-copyright{
+          visibility: hidden!important;
+        }
+      </style>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12 col-sm-12">
+            <div class="statistic-block block">
+
+              <!-- TradingView Widget BEGIN -->
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+  {
+  "symbols": [
+    {
+      "proName": "FOREXCOM:SPXUSD",
+      "title": "S&P 500"
+    },
+    {
+      "proName": "FOREXCOM:NSXUSD",
+      "title": "US 100"
+    },
+    {
+      "proName": "FX_IDC:EURUSD",
+      "title": "EUR/USD"
+    },
+    {
+      "proName": "BITSTAMP:BTCUSD",
+      "title": "Bitcoin"
+    },
+    {
+      "proName": "BITSTAMP:ETHUSD",
+      "title": "Ethereum"
+    }
+  ],
+  "showSymbolLogo": true,
+  "colorTheme": "dark",
+  "isTransparent": true,
+  "displayMode": "adaptive",
+  "locale": "en"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+<!-- TradingView Widget END -->
             </div>
           </div>
         </div>

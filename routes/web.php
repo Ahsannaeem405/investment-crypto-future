@@ -18,6 +18,14 @@ use App\Http\Controllers\userController;
 |
 */
 
+Route::get('/cls', function() {
+        $run = Artisan::call('config:clear');
+        $run = Artisan::call('cache:clear');
+        $run = Artisan::call('config:cache');
+        Session::flush();
+        return 'FINISHED';
+    });
+
 Route::get('/', function () {
     return view('auth.login');
 });

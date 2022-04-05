@@ -87,6 +87,27 @@
                                 <label>Last Name</label>
                                 <input type="text" placeholder="" class="form-control" name="last_name" value="{{$row->last_name}}">
                               </div>
+                              <div class="form-group">       
+                                <label>Profit</label>
+                                <input type="text" placeholder="" class="form-control" name="Profit" value="{{$row->Profit}}">
+                              </div>
+                              <div class="form-group">       
+                                <label>Bonsues</label>
+                                <input type="text" placeholder="" class="form-control" name="Bonsues" value="{{$row->Bonsues}}">
+                              </div>
+                              <div class="form-group">       
+                                <label>REF. COMISSIONS</label>
+                                <input type="text" placeholder="" class="form-control" name="REF_COMISSIONS" value="{{$row->REF_COMISSIONS}}">
+                              </div>
+                              <div class="form-group">       
+                                <label>ACTIVE PACKAGES</label>
+                                <input type="text" placeholder="" class="form-control" name="ACTIVE_PACKAGES" value="{{$row->ACTIVE_PACKAGES}}">
+                              </div>
+                              <div class="form-group">       
+                                <label>TOTAL PACKAGES</label>
+                                <input type="text" placeholder="" class="form-control" name="TOTAL_PACKAGES" value="{{$row->TOTAL_PACKAGES}}">
+                              </div>
+                              
                                <div class="form-group">       
                                 <label>Email</label>
                                 <input type="text" placeholder="" class="form-control" name="email" value="{{$row->email}}">
