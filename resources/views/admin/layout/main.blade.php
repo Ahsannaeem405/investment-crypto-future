@@ -64,7 +64,7 @@
                 <a class="navbar-brand" href="index.html">
                     <div class="brand-text brand-big visible text-uppercase">
                         <strong class="text-primary" style="color: white!important;">
-                              Future Investment
+                              Future Investments
                         </strong>
                         
                     </div>
