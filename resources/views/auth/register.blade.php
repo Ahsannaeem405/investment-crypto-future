@@ -229,7 +229,7 @@
                                     <div class="col-md-6">     
                                         <div class="form-group">
                                             
-                                            <input id="code" type="text" class="form-control @error('code') is-invalid @enderror" name="code" required autocomplete="code" placeholder="Referral Code *">
+                                            <input id="code" type="text" class="form-control @error('code') is-invalid @enderror" name="code"  autocomplete="code" placeholder="Referral Code *">
 
                                          
                                         </div>
